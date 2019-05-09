@@ -1,0 +1,31 @@
+.signup-form{
+    width:350px;
+    
+  }
+  .registerForm{
+    border: 1px solid black;
+    margin-top: 2%;
+    min-height: 50vh;
+    padding: 28px 3rem 1rem;
+    text-align: -webkit-center;
+    background-color: #c4ffd9;
+    width: 40%;
+    margin-left: 28%;
+    border-radius: 16px;
+  }
+
+  .goback{
+    margin-right: 40%;
+  }
+
+  .mat-raised-button {
+    margin-right: 40px;
+  }
+
+  .form-group{
+padding: 10px;
+  }
+
+  a{
+    text-decoration: none;
+  }

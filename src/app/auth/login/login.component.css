@@ -1,0 +1,29 @@
+.login-form{
+  width:300px;
+  align-self: center;
+}
+.registerForm{
+  border: 1px solid black;
+  margin-top: 2%;
+  min-height: 30vh;
+  padding: 28px 3rem 1rem;
+  text-align: -webkit-center;
+  background-color: #c4ffd9;
+  width: 40%;
+  margin-left: 28%;
+  border-radius: 16px;
+}
+
+.mat-raised-button {
+  margin-right: 40px;
+}
+
+a{
+  text-decoration: none;
+
+}
+
+
+.form-group{
+padding: 5px;
+}

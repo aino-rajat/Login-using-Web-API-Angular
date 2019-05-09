@@ -1,0 +1,42 @@
+.container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.container  .mat-drawer{
+    padding-left: 20px;
+    min-width: 200px;
+
+}
+
+.container  .mat-drawer .mat-button{
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.spacer{
+    flex:1 1 auto;
+}
+.nav-item{
+    padding-left: 30%;
+    align-content: center;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover,a:active{
+color: lightgrey;
+}
+
+.nav-caption{
+    display: inline-block;
+    padding-left: 6px;
+}

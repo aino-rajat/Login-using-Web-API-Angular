@@ -1,0 +1,52 @@
+
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" >
+    <!-- mode="side" to display the browser in single mode-->
+    <button color="primary" mat-button routerLink="/Admin">Admin</button>
+    <button color="primary" mat-button routerLink="/UserSignup" (click)="drawer.close()"><!--when user clicks on ther signup it closes the drawer-->
+      <mat-icon>face</mat-icon>
+      <span class="nav-caption">SignUp</span>
+    </button>
+    <button color="primary" mat-button routerLink="/subscription" >Subscribe</button>
+
+  </mat-drawer>
+  <div class="maindiv" id="appdiv">
+  <div class="sidenav-content">
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <button mat-icon-button (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>Particlon</span>
+
+        <mat-list-item class="nav-item">
+         <a> <button mat-button class="login" (click)="login()">
+          <mat-icon class="icon">input</mat-icon>
+            Login</button>
+        </a>
+      
+
+      <a routerLink="/UserSignup">Register
+      </a>
+      <a>  
+        <button mat-button>HOME
+      </button>
+    </a>
+
+      <a routerLink="/enquiry">ENQUIRY
+    </a>
+
+
+      </mat-list-item>
+        <span class="spacer"></span>
+        <mat-icon>more_vert</mat-icon>
+        
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <app-alert></app-alert>
+    
+    <router-outlet></router-outlet>
+  </div>
+  </div>
+</mat-drawer-container>
+

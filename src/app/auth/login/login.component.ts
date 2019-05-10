@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm, FormControl, Validators, FormGroup, FormBuilder} from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { AlertService } from '../../services/alert.service';
+
 import { first } from 'rxjs/operators';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 
@@ -14,14 +14,13 @@ export class LoginComponent implements OnInit {
     loginForm: FormGroup;
     loading = false;
     submitted = false;
-    returnUrl: string;
+   
 
     constructor(
         private formBuilder: FormBuilder,
         private route: ActivatedRoute,
         private router: Router,
-        private authenticationService: AuthenticationService,
-        private alertService: AlertService) {}
+        private authenticationService: AuthenticationService) {}
 
     ngOnInit() {
         this.loginForm = this.formBuilder.group({
@@ -32,8 +31,7 @@ export class LoginComponent implements OnInit {
         // reset login status
         this.authenticationService.logout();
 
-        // get return url from route parameters or default to '/'
-        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+       
     }
 
     // convenience getter for easy access to form fields
@@ -52,13 +50,14 @@ export class LoginComponent implements OnInit {
             .pipe(first())
             .subscribe(
                 data => {
-                    //this.router.navigate([this.returnUrl]);
+                    
                     // document.getElementById("appdiv").innerHTML="";
                     this.router.navigate(['home']);
                     
                 },
                 error => {
-                    this.alertService.error(error);
+                   
+                    alert("Inavlid details") 
                     this.loading = false;
                 });
     }

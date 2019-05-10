@@ -3,7 +3,6 @@ import { NgForm, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
-import {  AlertService } from 'src/app/services/alert.service';
 import { first } from 'rxjs/operators';
 
 @Component({
@@ -19,8 +18,7 @@ export class SignupComponent implements OnInit {
   constructor(
       private formBuilder: FormBuilder,
       private router: Router,
-      private userService: UserService,
-      private alertService: AlertService) { }
+      private userService: UserService) { }
 
   ngOnInit() {
       this.registerForm = this.formBuilder.group({
@@ -48,26 +46,14 @@ export class SignupComponent implements OnInit {
           .pipe(first())
           .subscribe(
               data => {
-                  this.alertService.success('Registration successful', true);
+                 
+                  alert("Thanks for Registration");
                   this.router.navigate(['/login']);
               },
               error => {
-                  this.alertService.error(error);
+                 alert("Enter Valid Details");
                   this.loading = false;
               });
   }
 
-  // constructor( private location: Location) { }
-
-  // ngOnInit() {
-
-  // }
-
-  // onSubmit(form: NgForm) {
-  //   console.log(form);
-  // }
-
-  // goBack(): void {
-  //   this.location.back();
-  // }
 }

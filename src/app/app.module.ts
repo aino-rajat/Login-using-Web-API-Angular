@@ -23,8 +23,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { EnquiryComponent } from './enquiry/enquiry.component';
 import { HomeComponent } from './home/home.component';
-import { AlertComponent } from './alert/alert.component';
-import { AlertService } from './services/alert.service';
+
 import { AuthenticationService} from './services/authentication.service';
 import { UserService} from './services/user.service';
 import { AuthGuard } from './authgaurd/auth.guard';
@@ -37,7 +36,7 @@ import { AuthGuard } from './authgaurd/auth.guard';
     SignupComponent,
     EnquiryComponent,
     HomeComponent,
-    AlertComponent
+   
   ],
   imports: [
     CommonModule,
@@ -59,7 +58,6 @@ import { AuthGuard } from './authgaurd/auth.guard';
   ],
   providers: [
     AuthGuard,
-    AlertService,
     AuthenticationService,
     UserService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

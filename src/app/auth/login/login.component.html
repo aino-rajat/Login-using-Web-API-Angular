@@ -25,89 +25,11 @@
       <button mat-raised-button [disabled]="loading" color="primary"> Login</button>
      
       <button mat-raised-button>
-      <a [routerLink]="['/UserSignup']" class="btn btn-link">Register</a>
+      <a [routerLink]="['/UserSignup']">SignUp</a>
         </button>
     </div>
     <router-outlet></router-outlet>
 </form>
 </div>
 
-
-
-
-
-
-
-
-
-
-<!-- <div class="edit-div">
-<section class="login-form">
-    <form [formGroup]="loginForm"
-      (ngSubmit)="onSubmit()">
-      <mat-form-field>
-        <input
-          type="username"
-          matInput placeholder="Your email"
-          formControlName="username">
-        <mat-hint>Please enter a  email.</mat-hint>
-        <mat-error>Invalid or missing email.</mat-error>
-      </mat-form-field>
-      <mat-form-field>
-        <input
-          type="password"
-          matInput
-          placeholder="Your password"
-          formControlName="password">
-        <mat-hint>Please enter your password.</mat-hint>
-        <mat-error>Missing password.</mat-error>
-      </mat-form-field>
-      <p>
-      <button type="submit" class="login-button"  mat-raised-button color="primary" [disabled]="loginForm.invalid">Submit</button>
-      <button color="primary" mat-button routerLink="/UserSignup">Signup</button>
-      </p>
-    </form>
-    <router-outlet></router-outlet>
-  </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- <div class="edit-div">
-  <section class="login-form">
-    <form #f="ngForm" (ngSubmit)="onLogin(f)">
-      <mat-form-field>
-        <input type="email" matInput placeholder="Enter your Email" 
-        ngModel name="email"
-        email required
-        #emailInput="ngModel">
-        <mat-error *ngIf="emailInput.hasError('required')">Field Cannot be Empty</mat-error>
-        <mat-error *ngIf="!emailInput.hasError('required')">In valid Email</mat-error>
-      </mat-form-field>
-
-      <mat-form-field>
-        <input type="password" matInput placeholder="Enter your Password" 
-        ngModel name="password"
-        required
-        minlength="6">
-        <mat-hint>Should be min 6 characters long!</mat-hint>
-      </mat-form-field>
-      <p >
-        <button mat-raised-button class="login-button" (click)="toggleShowSignUp" type="submit" color="primary">Login
-        </button>
-      
-        <a><button mat-raised-button (click)="signUp()" > Signup</button></a>
-      </p>
-    </form>
-  </section>
-  </div> -->
    
